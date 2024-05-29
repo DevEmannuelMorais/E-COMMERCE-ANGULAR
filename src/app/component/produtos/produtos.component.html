@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let produto of produtos">
+    <div class="card">
+      <img class="card-img-top" [src]="produto.imagemUrl" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ produto.nome }}</h5>
+        <p class="card-text">{{ produto.descricao }}</p>
+        <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+      </div>
+    </div>
+  </div>
+</div>

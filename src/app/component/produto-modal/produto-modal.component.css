@@ -1,0 +1,41 @@
+.mat-dialog-container {
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 20px 0;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+.btn-close {
+  color: #6c757d;
+  margin-right: 10px;
+}
+
+.mat-raised-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.mat-raised-button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,32 @@
+<div class="container">
+  <h2 class="mt-4">Gerenciamento de Produtos</h2>
+
+  <button mat-raised-button color="primary" class="mb-3" (click)="adicionarProduto()">Adicionar Novo Produto</button>
+
+  <h3 class="mt-4">Lista de Produtos</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Estoque</th>
+      <th>Valor</th>
+      <th>Foto</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let produto of produtos">
+      <td>{{ produto.nome }}</td>
+      <td>{{ produto.descricao }}</td>
+      <td>{{ produto.estoque }}</td>
+      <td>{{ produto.valor | currency }}</td>
+      <td><img [src]="produto.foto" alt="{{ produto.nome }}" width="50"></td>
+      <td>
+        <button mat-raised-button color="accent" (click)="editarProduto(produto)">Editar</button>
+        <button mat-raised-button color="warn" (click)="removerProduto(produto)">Remover</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

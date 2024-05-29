@@ -1,0 +1,30 @@
+<h2 mat-dialog-title class="modal-title">{{ data.editMode ? 'Editar Produto' : 'Adicionar Produto' }}</h2>
+
+<form [formGroup]="produtoForm" (ngSubmit)="onSubmit()">
+  <div class="modal-body">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Descrição</mat-label>
+      <input matInput formControlName="descricao" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Estoque</mat-label>
+      <input matInput type="number" formControlName="estoque" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Valor</mat-label>
+      <input matInput type="number" formControlName="valor" required>
+    </mat-form-field>
+    <div class="full-width">
+      <label for="foto">Foto</label>
+      <input type="file" id="foto" (change)="onFileChange($event)">
+    </div>
+  </div>
+  <div mat-dialog-actions class="modal-actions">
+    <button mat-button type="button" class="btn-close" (click)="onCancel()">Fechar</button>
+    <button mat-raised-button color="primary" type="submit">{{ data.editMode ? 'Salvar' : 'Adicionar' }}</button>
+  </div>
+</form>
