@@ -1,27 +1,50 @@
-# ECommerce
+# E-Commerce Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+Este projeto é um sistema de gerenciamento de produtos de e-commerce desenvolvido com Angular 17. O sistema permite adicionar, editar, remover e listar produtos. Os dados são mocados e não há consumo de APIs externas.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Adicionar Produto**: Adicione novos produtos ao sistema.
+- **Editar Produto**: Edite as informações dos produtos existentes.
+- **Remover Produto**: Remova produtos do sistema.
+- **Listar Produtos**: Veja a lista de todos os produtos cadastrados.
 
-## Code scaffolding
+## Tecnologias Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular 17**
+- **Angular Material**
+- **Reactive Forms**
+- **Bootstrap**
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalação
 
-## Running unit tests
+Siga os passos abaixo para configurar e executar o projeto localmente.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Pré-requisitos
 
-## Running end-to-end tests
+Certifique-se de ter o Node.js e o Angular CLI instalados.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
 
-## Further help
+### Passos
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/DevEmannuelMorais/E-COMMERCE-ANGULAR.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd e-commerce-angular
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Execute o servidor de desenvolvimento:
+   ```bash
+   ng serve
+   ```
+5. Abra o navegador e navegue até http://localhost:4200/ para ver o projeto em execução.
