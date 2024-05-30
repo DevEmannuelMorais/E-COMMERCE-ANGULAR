@@ -5,6 +5,7 @@ import {Produto} from "../../model/produto.model";
 import {MatButton} from "@angular/material/button";
 import {ProdutoModalComponent} from "../produto-modal/produto-modal.component";
 import {MatDialog} from "@angular/material/dialog";
+import {ConfirmDialogService} from "../../service/confirm-dialog.service";
 
 
 @Component({
@@ -26,7 +27,7 @@ export class AdministrativoComponent {
     new Produto('Produto 3', 'Descrição do Produto 3', 2, 300, 'https://via.placeholder.com/150')
   ];
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public confirmDialog: ConfirmDialogService) {}
 
   abrirModal(produto: Produto | null, editMode: boolean): void {
     const dialogRef = this.dialog.open(ProdutoModalComponent, {
@@ -64,10 +65,16 @@ export class AdministrativoComponent {
     this.abrirModal(produto, true);
   }
 
-  removerProduto(produto: Produto) {
-    const index = this.produtos.indexOf(produto);
-    if (index !== -1) {
-      this.produtos.splice(index, 1);
+  async removerProduto(produto: Produto) {
+    const confirm = await this.confirmDialog.confirm(
+      'Remover Produto',
+      `Tem certeza que deseja remover o produto ${produto.nome}?`
+    )
+    if (confirm) {
+      const index = this.produtos.indexOf(produto);
+      if (index !== -1) {
+        this.produtos.splice(index, 1);
+      }
     }
   }
 }
