@@ -15,17 +15,17 @@ export class ProdutosComponent {
     {
       nome: 'Produto 1',
       descricao: 'Descrição do Produto 1',
-      imagemUrl: 'https://via.placeholder.com/150'
+      imagemUrl: '/assets/images/img.png'
     },
     {
       nome: 'Produto 2',
       descricao: 'Descrição do Produto 2',
-      imagemUrl: 'https://via.placeholder.com/150'
+      imagemUrl: '/assets/images/img_3.png'
     },
     {
       nome: 'Produto 3',
       descricao: 'Descrição do Produto 3',
-      imagemUrl: 'https://via.placeholder.com/150'
+      imagemUrl: '/assets/images/televisao.png'
     }
   ];
 }
